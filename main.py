@@ -19,7 +19,7 @@ bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
 @dp.message_handler(CommandStart())
 async def handlarlars(message: types.Message):
-    await message.answer(f"Assalomu aleykum {message.from_user.full_name}. Sizni botimizda ko'rib turganimizda hursandmiz", reply_markup=btn)
+    await message.answer(f"Assalomu aleykum hurmat talab inson {message.from_user.full_name}. Sizni botimizda ko'rib turganimizda hursandmiz", reply_markup=btn)
 
 
 # @dp.message_handler(commands=['start', 'help'])
