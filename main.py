@@ -1,14 +1,16 @@
 import logging
 from aiogram import Bot, Dispatcher, executor, types
 from aiogram.dispatcher.filters import CommandStart
-from tokens_id.ip_token import token
-from handler import button
 import datetime as t
 import requests
-from aiogram.utils.markdown import hbold
-from aiogram.dispatcher.webhook import get_new_configured_app, SendMessage
 # import API.exchangeAPI as data
-API_TOKEN = token
+from aiogram.types import ReplyKeyboardMarkup
+
+btn = ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
+btn.add("🇺🇸Dollar//🇸🇱So'm", "🇸🇱So'm//🇺🇸Dollar", '🇺🇸Dollar//🇷🇺Rubl', "🇷🇺Rubl//🇺🇸Dollar", "🇷🇺Rubl//🇸🇱So'm", "🇸🇱So'm//🇷🇺Rubl")
+
+
+API_TOKEN = '2105356595:AAG-Ebw70bBrFjlhqELPD5rfL_NPk-fSOhE'
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 
@@ -17,7 +19,7 @@ bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
 @dp.message_handler(CommandStart())
 async def handlarlars(message: types.Message):
-    await message.answer(f"Assalomu aleykum {message.from_user.full_name}. Sizni botimizda ko'rib turganimizda hursandmiz", reply_markup=button.btn)
+    await message.answer(f"Assalomu aleykum {message.from_user.full_name}. Sizni botimizda ko'rib turganimizda hursandmiz", reply_markup=btn)
 
 
 # @dp.message_handler(commands=['start', 'help'])
