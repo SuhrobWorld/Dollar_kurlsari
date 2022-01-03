@@ -80,7 +80,7 @@ async def dollor(message: types.Message):
     day = time.strftime("%d")
     month = time.strftime("%m")
     qiymayt = data["conversion_rate"]
-    await message.answer(f"⏰{year}.{day}.{month}kungi hisobotga ko'ra\n💵1 {money} = {qiymayt} {exiting}\n\n Created by Suhrob Mavlonov")
+    await message.answer(f"⏰{year}.{day}.{month}kungi hisobotga ko'ra\n💵1 {money} = {qiymayt} {exiting}\n\n Created by Qodirqulov Azizbek")
 
 
 if __name__ == '__main__':
